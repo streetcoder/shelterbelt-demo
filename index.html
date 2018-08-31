@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+
+      .tab-content {
+        padding: 30px;
+      }
+    </style>
+     <link rel="stylesheet" href="node_modules/ol-geocoder/ol-geocoder.min.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Shelterbelt DSS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+
+    
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="scenario-tab" data-toggle="tab" href="#scenario" role="tab" aria-controls="scenario" aria-selected="true">Climate Scenario</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="plant-tab" data-toggle="tab" href="#plant" role="tab" aria-controls="plant" aria-selected="false">Plant a shelterbelt</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="calculate-tab" data-toggle="tab" href="#calculate" role="tab" aria-controls="calculate" aria-selected="false">Calculate</a>
+                </li>
+              </ul>
+
+
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="scenario" role="tabpanel" aria-labelledby="scenario-tab">                                                           
+                    
+                    <canvas id="myChart" style="width: 512px; height: 256px"></canvas>    
+                    
+                    <div class="card">
+                        <div class="card-header">
+                          Filter Options
+                        </div>
+                        <div class="card-body">
+                          
+                            <form>
+                              <div class="form-group row">
+                                <label for="climate_scinerio" class="col-sm-2 col-form-label">Climate Scinerio</label>
+                                <div class="col-sm-3">
+                                    <select id="inputState" class="form-control">
+                                      <option selected>A-D</option>
+                                      <option>A</option>
+                                      <option>B</option>
+                                      <option>C</option>
+                                      <option>D</option>
+                                    </select>                                  
+                                </div>                                
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>A-D</option>
+                                      <option>A</option>
+                                      <option>B</option>
+                                      <option>C</option>
+                                      <option>D</option>
+                                    </select>                                  
+                                </div>                                
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>A-D</option>
+                                      <option>A</option>
+                                      <option>B</option>
+                                      <option>C</option>
+                                      <option>D</option>
+                                    </select>                                  
+                                </div>                                
+                              </div>
+
+                              <div class="form-group row">
+                                <label for="species" class="col-sm-2 col-form-label">Species</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>1-6</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                      <option>6</option>
+                                    </select>                                  
+                                </div>                                
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>7-11</option>
+                                      <option>7</option>
+                                      <option>8</option>
+                                      <option>9</option>
+                                      <option>10</option>
+                                      <option>11</option>
+                                    </select>                                  
+                                </div>                                
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>12-18</option>
+                                      <option>12</option>
+                                      <option>13</option>
+                                      <option>14</option>
+                                      <option>15</option>
+                                      <option>16</option>
+                                      <option>17</option>
+                                      <option>18</option>
+                                    </select>                                  
+                                </div>                                
+                              </div>          
+                              <div class="form-group row">
+                                  <label for="species" class="col-sm-2 col-form-label">Time</label>
+                                  <div class="col-sm-10">
+                                      <button type="button" class="btn btn-outline-info">5 Yr</button>
+                                      <button type="button" class="btn btn-outline-info">10 Yr</button>
+                                      <button type="button" class="btn btn-outline-info">20 Yr</button>
+                                      <button type="button" class="btn btn-outline-info">50 Yr</button>
+                                      <button type="button" class="btn btn-outline-info">100 Yr</button>
+                                  </div>                                                                                                  
+                                </div>                                                    
+                                                            
+                              <div class="form-group row">
+                                <div class="col-sm-10">
+                                  <button type="submit" class="btn btn-primary">Apply</button>
+                                </div>
+                              </div>
+                            </form>
+                          
+                        </div>
+                      </div>
+
+                </div>
+                <div class="tab-pane fade" id="plant" role="tabpanel" aria-labelledby="plant-tab">                  
+
+                    <!-- <div id="map" class="map"></div>  -->
+
+                    <div class="row">
+                      <div class="col-lg-6 text-center">
+                        <div id="map" class="map"></div>
+                      </div>
+                      <div class="col-lg-6 ">
+                        
+              
+                        <form>   
+                          <div class="form-group">
+                            <p><b>Length:</b> 510m</p>
+                            <label for="exampleFormControlSelect1">Rows</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect2">Species Mix</label>
+                            <select  class="form-control" id="exampleFormControlSelect2">
+                              <option>Mix A</option>
+                              <option>Mix B</option>
+                              <option>Mix C</option>
+                              <option>Mix D</option>
+                            </select>
+                          </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlSelect2">Shelterbelt Type</label>
+                            <select  class="form-control" id="exampleFormControlSelect2">
+                              <option>Yard</option>
+                              <option>Field</option>
+                              <option>Riparian</option>
+                              <option>Roadside</option>
+                              <option>Wildlife</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+
+                </div>
+                <div class="tab-pane fade" id="calculate" role="tabpanel" aria-labelledby="calculate-tab">
+                    
+                  Coming later
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>    
+
+    <script src="node_modules/ol-geocoder/ol-geocoder.js"></script>
+    <!-- Bootstrap core JavaScript -->    
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+
+      // first tab: display graph
+      function randomNumber(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      function randomBar(date, lastClose) {
+        var open = randomNumber(lastClose * 0.95, lastClose * 1.05);
+        var close = randomNumber(open * 0.95, open * 1.05);
+        return {
+          x: date.valueOf(),
+          y: close
+        };
+      }
+
+      var dateFormat = 'MMMM DD YYYY';
+      // var date = moment('April 01 2017', dateFormat);
+      var date = moment(new Date(), dateFormat);
+      
+      var data = [randomBar(date, 30)];
+
+      var labels = [date];
+      while (data.length < 30) {
+        date = date.clone().add(1, 'd');
+        if (date.isoWeekday() <= 5) {
+          data.push(randomBar(date, data[data.length - 1].y));
+          labels.push(date);
+        }
+      }
+
+      console.log(data);
+      console.log(labels);
+
+      var mylabel = [5,10,15,20,25,30,35,40,45,50];
+      var ctx = document.getElementById('myChart').getContext('2d');
+      ctx.canvas.width = 1000;
+      ctx.canvas.height = 300;
+      var cfg = {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'CHART - Shelterbelt',
+            data: data,
+            type: 'line',
+            pointRadius: 0,
+            fill: false,
+            lineTension: 0,
+            borderWidth: 3,
+            borderColor: "#2778DD"
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            xAxes: [{
+              type: 'time',
+              distribution: 'series',
+              ticks: {
+                minRotation: 90,
+                maxRotation: 90,
+                source: 'labels'
+              }
+            }],
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Climate Scenerio'
+              }
+            }]
+          }
+        }
+      };
+      var chart = new Chart(ctx, cfg);
+
+
+      // second tab loading map
+      var source = new ol.source.BingMaps({
+          key: 'AjuiTz-K1RGALYtpTD5ikQXwQjDIkKGqaxBh-cNJA8BxPcdzxLyTQ4c-RInRBTE7',
+          imagerySet: 'Aerial'})
+  
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: source
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([-105, 52.82]),
+          zoom: 14
+        })
+      });
+      var draw;
+
+      function addInteraction() {
+          draw = new ol.interaction.Draw({
+            source: source,
+            type: "LineString"
+          });
+          map.addInteraction(draw);
+      }
+      addInteraction();
+
+      $('.nav-tabs a#plant-tab').on('shown.bs.tab', function(){
+        map.getTargetElement().hidden = false;        
+        map.updateSize();
+      });      
+      </script>
+
+  </body>
+
+</html>
