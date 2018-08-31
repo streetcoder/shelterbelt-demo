@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-bare.git"
+    "url": "git@github.com:streetcoder/shelterbelt-demo.git"
   },
   "dependencies": {
     "bootstrap": "4.0.0",
