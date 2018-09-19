@@ -155,7 +155,83 @@
                                         <button type="button" class="btn btn-outline-info">Hybrid Poplar</button>
                                         <button type="button" class="btn btn-outline-info">Green Ash</button>
                                     </div>                                                                                                  
-                                </div>                                               
+                                </div>
+                                <!-- <label for="climate_scinerio" class="col-sm-2 col-form-label">Climate Scinerio</label>
+                                <div class="col-sm-3">
+                                    <select id="inputState" class="form-control">
+                                      <option selected>A-D</option>
+                                      <option>A</option>
+                                      <option>B</option>
+                                      <option>C</option>
+                                      <option>D</option>
+                                    </select>                                  
+                                </div>                                
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>A-D</option>
+                                      <option>A</option>
+                                      <option>B</option>
+                                      <option>C</option>
+                                      <option>D</option>
+                                    </select>                                  
+                                </div>                                
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>A-D</option>
+                                      <option>A</option>
+                                      <option>B</option>
+                                      <option>C</option>
+                                      <option>D</option>
+                                    </select>                                  
+                                </div>                                
+                              </div> -->
+
+                              <!-- <div class="form-group row">
+                                <label for="species" class="col-sm-2 col-form-label">Species</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>1-6</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                      <option>6</option>
+                                    </select>                                  
+                                </div>                                
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>7-11</option>
+                                      <option>7</option>
+                                      <option>8</option>
+                                      <option>9</option>
+                                      <option>10</option>
+                                      <option>11</option>
+                                    </select>                                  
+                                </div>                                
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                      <option selected>12-18</option>
+                                      <option>12</option>
+                                      <option>13</option>
+                                      <option>14</option>
+                                      <option>15</option>
+                                      <option>16</option>
+                                      <option>17</option>
+                                      <option>18</option>
+                                    </select>                                  
+                                </div>                                
+                              </div>           -->
+                              <!-- <div class="form-group row">
+                                  <label for="species" class="col-sm-2 col-form-label">Time</label>
+                                  <div class="col-sm-10">
+                                      <button type="button" class="btn btn-outline-info">5 Yr</button>
+                                      <button type="button" class="btn btn-outline-info">10 Yr</button>
+                                      <button type="button" class="btn btn-outline-info">20 Yr</button>
+                                      <button type="button" class="btn btn-outline-info">50 Yr</button>
+                                      <button type="button" class="btn btn-outline-info">100 Yr</button>
+                                  </div>                                                                                                  
+                              </div>                                                     -->
                                                             
                               <div class="form-group row">
                                 <div class="col-sm-10">
@@ -240,217 +316,78 @@
     <script type="text/javascript">
 
       // first tab: display graph
-      // function randomNumber(min, max) {
-      //   return Math.random() * (max - min) + min;
-      // }
+      function randomNumber(min, max) {
+        return Math.random() * (max - min) + min;
+      }
 
-      // function randomBar(date, lastClose) {
-      //   var open = randomNumber(lastClose * 0.95, lastClose * 1.05);
-      //   var close = randomNumber(open * 0.95, open * 1.05);
-      //   return {
-      //     x: date.valueOf(),
-      //     y: close
-      //   };
-      // }
+      function randomBar(date, lastClose) {
+        var open = randomNumber(lastClose * 0.95, lastClose * 1.05);
+        var close = randomNumber(open * 0.95, open * 1.05);
+        return {
+          x: date.valueOf(),
+          y: close
+        };
+      }
 
-      // var dateFormat = 'MMMM DD YYYY';
-      // // var date = moment('April 01 2017', dateFormat);
-      // var date = moment(new Date(), dateFormat);
+      var dateFormat = 'MMMM DD YYYY';
+      // var date = moment('April 01 2017', dateFormat);
+      var date = moment(new Date(), dateFormat);
       
-      // var data = [randomBar(date, 30)];
+      var data = [randomBar(date, 30)];
 
-      // var labels = [date];
-      // while (data.length < 30) {
-      //   date = date.clone().add(1, 'd');
-      //   if (date.isoWeekday() <= 5) {
-      //     data.push(randomBar(date, data[data.length - 1].y));
-      //     labels.push(date);
-      //   }
-      // }
+      var labels = [date];
+      while (data.length < 30) {
+        date = date.clone().add(1, 'd');
+        if (date.isoWeekday() <= 5) {
+          data.push(randomBar(date, data[data.length - 1].y));
+          labels.push(date);
+        }
+      }
 
-      // // console.log(data);
-      // // console.log(labels);
+      console.log(data);
+      console.log(labels);
 
-      // var mylabel = [5,10,25,50,100];
-      // var mydata = [1,2,3,4,5,6,7,8,9];
-      // var ctx = document.getElementById('myChart').getContext('2d');
-      // ctx.canvas.width = 1000;
-      // ctx.canvas.height = 300;
-      // var cfg = {
-      //   type: 'line',
-      //   data: {
-      //     labels: mylabel,
-      //     datasets: [{
-      //       label: 'CHART - Shelterbelt',
-      //       data: mydata,
-      //       type: 'line',
-      //       pointRadius: 0,
-      //       fill: false,
-      //       lineTension: 0,
-      //       borderWidth: 3,
-      //       borderColor: "#2778DD"
-      //     }]
-      //   },
-      //   options: {
-      //     responsive: true,
-      //     scales: {
-      //       xAxes: [{
-      //         type: 'time',
-      //         // distribution: 'series',
-      //         ticks: {
-      //           minRotation: 90,
-      //           maxRotation: 90,
-      //           source: 'labels'
-      //         }
-      //       }],
-      //       yAxes: [{
-      //         scaleLabel: {
-      //           display: true,
-      //           labelString: 'Climate Scenerio'
-      //         }
-      //       }]
-      //     }
-      //   }
-      // };
-
+      var mylabel = [5,10,15,20,25,30,35,40,45,50];
       var ctx = document.getElementById('myChart').getContext('2d');
-      var timeFormat = 'MM/DD/YYYY HH:mm';
-
-      function newDate(days) {
-        return moment().add(days, 'd').toDate();
-      }
-
-      function newDateString(days) {
-        return moment().add(days, 'd').format(timeFormat);
-      }
-    
-      // console.log(newDateString(0));
-      var color = Chart.helpers.color;
-      var config = {
+      ctx.canvas.width = 1000;
+      ctx.canvas.height = 300;
+      var cfg = {
         type: 'line',
         data: {
-          labels: [ // Date Objects
-            5,
-            10,
-            25,
-            50,
-            100
-          ],
-          datasets: [
-            {
-            label: 'My First dataset',
-            backgroundColor: color('rgb(255, 99, 132)').alpha(0.5).rgbString(),
-            borderColor: 'rgb(255, 99, 132)',
+          labels: labels,
+          datasets: [{
+            label: 'CHART - Shelterbelt',
+            data: data,
+            type: 'line',
+            pointRadius: 0,
             fill: false,
-            data: [{
-              x: 5,
-              y: 1.9
-            }, {
-              x: 10,
-              y: 2
-            }, {
-              x: 25,
-              y: 1.9
-            }, {
-              x: 50,
-              y: 0.7
-            }, {
-              x: 100,
-              y: 0
-            }
-            ],
-            // data: [
-            //   5,
-            //   10,
-            //   15,
-            //   20,
-            //   25,
-            //   30,
-            //   35
-            // ],
-          }, 
-          {
-            label: 'My Second dataset',
-            backgroundColor: color('rgb(54, 162, 235)').alpha(0.5).rgbString(),
-            borderColor: 'rgb(54, 162, 235)',
-            fill: false,
-            data: [{
-              x: 5,
-              y: 1.8
-            }, {
-              x: 10,
-              y: 1.7
-            }, {
-              x: 25,
-              y: 1.6
-            }, {
-              x: 50,
-              y: 1
-            }, {
-              x: 100,
-              y: 0.7
-            }
-            ],
-            // data: [
-            //   10,
-            //   20,
-            //   30,
-            //   40,
-            //   50,
-            //   60,
-            //   70
-            // ],
-          }
-          // , {
-          //   label: 'Dataset with point data',
-          //   backgroundColor: color('rgb(75, 192, 192)').alpha(0.5).rgbString(),
-          //   borderColor: 'rgb(75, 192, 192)',
-          //   fill: false,
-          //   data: [{
-          //     x: newDateString(0),
-          //     y: 5
-          //   }, {
-          //     x: newDateString(5),
-          //     y: 20
-          //   }, {
-          //     x: newDateString(7),
-          //     y: 35
-          //   }, {
-          //     x: newDateString(15),
-          //     y: 50
-          //   }],
-          // }
-        ]
+            lineTension: 0,
+            borderWidth: 3,
+            borderColor: "#2778DD"
+          }]
         },
         options: {
-          title: {
-            text: 'Chart.js Time Scale'
-          },
+          responsive: true,
           scales: {
             xAxes: [{
-              // type: 'time',
-              time: {
-                format: timeFormat,
-                // round: 'day'
-                tooltipFormat: 'll HH:mm'
-              },
-              scaleLabel: {
-                display: true,
-                labelString: 'Years'
+              type: 'time',
+              distribution: 'series',
+              ticks: {
+                minRotation: 90,
+                maxRotation: 90,
+                source: 'labels'
               }
             }],
             yAxes: [{
               scaleLabel: {
                 display: true,
-                labelString: 'value'
+                labelString: 'Climate Scenerio'
               }
             }]
-          },
+          }
         }
       };
-
-      var chart = new Chart(ctx, config);
-      // var chart = new Chart(ctx, cfg);
+      var chart = new Chart(ctx, cfg);
 
 
       // second tab loading map
