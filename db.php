@@ -9,6 +9,10 @@
 
     $arr = pg_fetch_all($result);
 
+    $r_site = $_GET['site'];
+    $r_climate = $_GET['climate'];
+    $r_species = $_GET['species'];
+
 function search_item($site, $scenario, $species, $array) {
     foreach ($array as $key => $val) {
         if ($val['site'] === $site && $val['Scenario'] === $scenario && $val['species'] === $species ) {
@@ -18,7 +22,7 @@ function search_item($site, $scenario, $species, $array) {
     return null;
 }
 
-$arr_key = search_item('pm1','A2','White Spruce', $arr);
+$arr_key = search_item($r_site,$r_climate,$r_species, $arr);
 
 foreach($arr[$arr_key] as $key=>$value){
     if(!is_int($key)){
@@ -31,9 +35,9 @@ foreach ($arr[$arr_key] as $key=>$value){
         'x' => $key,
         'y' => $value,
     );
-//    $arr_for_js['x']=$key;
-//    $arr_for_js['y']=$value;
 }
+
+//echo '<pre>',print_r($_GET[''],1),'</pre>';
 
 echo  json_encode($arr_for_js);
 
