@@ -103,38 +103,33 @@
                                   <label for="climate_scinerio" class="col-sm-2 col-form-label">Sites</label>
                                   <div class="col-sm-2">
                                       <select id="1-site" class="form-control">
-                                        <option value="" selected>Sites</option>
-                                        <option value="pm1">PM1</option>
+                                        <option value="pm1" selected>PM1</option>
                                         <option value="pm2">PM2</option>
                                       </select>                                  
                                   </div>                                
                                   <div class="col-sm-2">
-                                      <select class="form-control">
-                                        <option selected>Sites</option>
-                                        <option>PM1</option>
-                                        <option>PM2</option>
-                                      </select>                                  
+                                      <select id="2-site" class="form-control">
+                                          <option value="pm1" selected>PM1</option>
+                                          <option value="pm2">PM2</option>
+                                      </select>
                                   </div>                                
                                   <div class="col-sm-2">
-                                      <select class="form-control">
-                                        <option selected>Sites</option>
-                                        <option>PM1</option>
-                                        <option>PM2</option>
-                                      </select>                                  
+                                      <select id="3-site" class="form-control">
+                                          <option value="pm1">PM1</option>
+                                          <option value="pm2" selected>PM2</option>
+                                      </select>
                                   </div>                                
                                   <div class="col-sm-2">
-                                      <select class="form-control">
-                                        <option selected>Sites</option>
-                                        <option>PM1</option>
-                                        <option>PM2</option>
-                                      </select>                                  
+                                      <select id="4-site" class="form-control">
+                                          <option value="pm1">PM1</option>
+                                          <option value="pm2" selected>PM2</option>
+                                      </select>
                                   </div>                                
                                   <div class="col-sm-2">
-                                      <select class="form-control">
-                                        <option selected>Sites</option>
-                                        <option>PM1</option>
-                                        <option>PM2</option>
-                                      </select>                                  
+                                      <select id="5-site" class="form-control">
+                                          <option value="pm1" selected>PM1</option>
+                                          <option value="pm2">PM2</option>
+                                      </select>
                                   </div>                                
                                 </div>
 
@@ -142,43 +137,38 @@
                                     <label for="climate_scinerio" class="col-sm-2 col-form-label">Climate Scinerio</label>
                                     <div class="col-sm-2">
                                         <select id="1-climate" class="form-control">
-                                          <option value="" selected>Scinerio</option>
-                                          <option value="B1">B1</option>
+                                          <option value="B1" selected>B1</option>
                                           <option value="A1B">A1B</option>
                                           <option value="A2">A2</option>
                                         </select>                                  
                                     </div>                                
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option selected>Scinerio</option>
-                                            <option>B1</option>
-                                            <option>A1B</option>
-                                            <option>A2</option>
-                                        </select>                                   
+                                        <select id="2-climate" class="form-control">
+                                            <option value="B1" selected>B1</option>
+                                            <option value="A1B">A1B</option>
+                                            <option value="A2">A2</option>
+                                        </select>
                                     </div> 
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                          <option selected>Scinerio</option>
-                                          <option>B1</option>
-                                          <option>A1B</option>
-                                          <option>A2</option>
+                                        <select id="3-climate" class="form-control">
+                                            <option value="B1">B1</option>
+                                            <option value="A1B" selected>A1B</option>
+                                            <option value="A2">A2</option>
                                         </select>                                  
                                     </div>                                
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option selected>Scinerio</option>
-                                            <option>B1</option>
-                                            <option>A1B</option>
-                                            <option>A2</option>
-                                        </select>                                   
+                                        <select id="4-climate" class="form-control">
+                                            <option value="B1">B1</option>
+                                            <option value="A1B">A1B</option>
+                                            <option value="A2" selected>A2</option>
+                                        </select>
                                     </div> 
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option selected>Scinerio</option>
-                                            <option>B1</option>
-                                            <option>A1B</option>
-                                            <option>A2</option>
-                                        </select>                                   
+                                        <select id="5-climate" class="form-control">
+                                            <option value="B1">B1</option>
+                                            <option value="A1B" selected>A1B</option>
+                                            <option value="A2">A2</option>
+                                        </select>
                                     </div>                                                                                                 
                                 </div>
                                 
@@ -187,45 +177,40 @@
                                     <label for="species" class="col-sm-2 col-form-label">Species</label>
                                     <div class="col-sm-2">
                                         <select id="1-species" class="form-control">
-                                            <option value="" selected>Species</option>
-                                            <option>White Spruce</option>
+                                            <option selected>White Spruce</option>
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
                                             <option>Green Ash</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option selected>Species</option>
+                                        <select id="2-species" class="form-control">
                                             <option>White Spruce</option>
-                                            <option>Scots Pine</option>
+                                            <option selected>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
                                             <option>Green Ash</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option selected>Species</option>
+                                        <select id="3-species" class="form-control">
                                             <option>White Spruce</option>
                                             <option>Scots Pine</option>
-                                            <option>Hybrid Poplar</option>
+                                            <option selected>Hybrid Poplar</option>
                                             <option>Green Ash</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option selected>Species</option>
+                                        <select id="4-species" class="form-control">
                                             <option>White Spruce</option>
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
-                                            <option>Green Ash</option>
+                                            <option selected>Green Ash</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option selected>Species</option>
+                                        <select id="5-species" class="form-control">
                                             <option>White Spruce</option>
-                                            <option>Scots Pine</option>
+                                            <option selected>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
                                             <option>Green Ash</option>
                                         </select>
@@ -235,19 +220,19 @@
                                 <div class="form-group row">
                                     <label for="species" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-2">
-                                        <button id="1-apply" type="submit" class="btn btn-primary">Apply</button>
+                                        <button id="1-apply" type="submit" class="btn btn-success btn-block">Apply</button>
                                     </div>
                                     <div class="col-sm-2">
-                                        <button type="submit" class="btn btn-primary">Apply</button>
+                                        <button id="2-apply" type="submit" class="btn btn-success btn-block">Apply</button>
                                     </div>
                                     <div class="col-sm-2">
-                                        <button type="submit" class="btn btn-primary">Apply</button>
+                                        <button id="3-apply" type="submit" class="btn btn-success btn-block">Apply</button>
                                     </div>
                                     <div class="col-sm-2">
-                                        <button type="submit" class="btn btn-primary">Apply</button>
+                                        <button id="4-apply" type="submit" class="btn btn-success btn-block">Apply</button>
                                     </div>
                                     <div class="col-sm-2">
-                                        <button type="submit" class="btn btn-primary">Apply</button>
+                                        <button id="5-apply" type="submit" class="btn btn-success btn-block">Apply</button>
                                     </div>
 
                                 </div>
@@ -334,106 +319,74 @@
 
     <script type="text/javascript">
 
-       var data1 = [{
-           x: 5,
-           y: 1.9
-       }, {
-           x: 10,
-           y: 2
-       }, {
-           x: 25,
-           y: 1.9
-       }, {
-           x: 50,
-           y: 0.7
-       }, {
-           x: 100,
-           y: 0
-       }
-       ];
-
-
-
-
+      var rg_data1 = [{ x: 5, y: 1.4 }, { x: 10, y: 1.2 }, { x: 25, y: 1.1 }, { x: 50, y: 0.9 }, { x: 100, y: 0.5 } ];
+      var rg_data2 = [{ x: 5, y: 1.7 }, { x: 10, y: 1.6 }, { x: 25, y: 1.5 }, { x: 50, y: 0.9 }, { x: 100, y: 0.6 }];
+      var rg_data3 = [{ x: 5, y: 1.9 }, { x: 10, y: 2 }, { x: 25, y: 2 }, { x: 50, y: 1 }, { x: 100, y: 0 } ];
+      var rg_data4 = [{ x: 5, y: 1.8 }, { x: 10, y: 1.6 }, { x: 25, y: 1.6 }, { x: 50, y: 1.1 }, { x: 100, y: 0.8 } ];
+      var rg_data5 = [{ x: 5, y: 1.8 }, { x: 10, y: 1.7 }, { x: 25, y: 1.6 }, { x: 50, y: 1.0 }, { x: 100, y: 0.7 } ];
 
       var ctx = document.getElementById('myChart').getContext('2d');
-      var timeFormat = 'MM/DD/YYYY HH:mm';
 
       var color = Chart.helpers.color;
       var config = {
         type: 'line',
         data: {
-          labels: [ // Date Objects
-            5,
-            10,
-            25,
-            50,
-            100
-          ],
+          labels: [  5, 10, 25, 50, 100 ],
           datasets: [
             {
-            label: 'My First dataset',
+            label: 'Ring Growth 1',
             backgroundColor: color('rgb(255, 99, 132)').alpha(0.5).rgbString(),
             borderColor: 'rgb(255, 99, 132)',
             fill: false,
-            data: data1
+            data: rg_data1
           }, 
           {
-            label: 'My Second dataset',
+            label: 'Ring Growth 2',
             backgroundColor: color('rgb(54, 162, 235)').alpha(0.5).rgbString(),
             borderColor: 'rgb(54, 162, 235)',
             fill: false,
-            data: [{
-              x: 5,
-              y: 1.8
-            }, {
-              x: 10,
-              y: 1.7
-            }, {
-              x: 25,
-              y: 1.6
-            }, {
-              x: 50,
-              y: 1
-            }, {
-              x: 100,
-              y: 0.7
-            }
-            ]
+            data: rg_data2
+          },
+           {
+             label: 'Ring Growth 3',
+             backgroundColor: color('rgb(75, 192, 192)').alpha(0.5).rgbString(),
+             borderColor: 'rgb(75, 192, 192)',
+             fill: false,
+             data: rg_data3
+           },
+          {
+              label: 'Ring Growth 4',
+              backgroundColor: color('rgb(255, 159, 64)').alpha(0.5).rgbString(),
+              borderColor: 'rgb(255, 159, 64)',
+              fill: false,
+              data: rg_data4
+          },
+          {
+              label: 'Ring Growth 5',
+              backgroundColor: color('rgb(153, 102, 255)').alpha(0.5).rgbString(),
+              borderColor: 'rgb(153, 102, 255)',
+              fill: false,
+              data: rg_data5
           }
-          // , {
-          //   label: 'Dataset with point data',
-          //   backgroundColor: color('rgb(75, 192, 192)').alpha(0.5).rgbString(),
-          //   borderColor: 'rgb(75, 192, 192)',
-          //   fill: false,
-          //   data: [{
-          //     x: newDateString(0),
-          //     y: 5
-          //   }, {
-          //     x: newDateString(5),
-          //     y: 20
-          //   }, {
-          //     x: newDateString(7),
-          //     y: 35
-          //   }, {
-          //     x: newDateString(15),
-          //     y: 50
-          //   }],
-          // }
+
         ]
         },
         options: {
           title: {
-            text: 'Chart.js Time Scale'
+            display: true,
+            text: 'Ring Growth Scale'
           },
+        tooltips: {
+            enabled: true,
+            mode: 'single',
+            callbacks: {
+                title: function(tooltipItems, data) {
+                    return 'Year ' + tooltipItems[0].xLabel;
+                }
+            }
+        },
           scales: {
             xAxes: [{
-              // type: 'time',
-              time: {
-                format: timeFormat,
-                // round: 'day'
-                tooltipFormat: 'll HH:mm'
-              },
               scaleLabel: {
                 display: true,
                 labelString: 'Years'
@@ -442,7 +395,7 @@
             yAxes: [{
               scaleLabel: {
                 display: true,
-                labelString: 'value'
+                labelString: 'Ring Growth'
               }
             }]
           },
@@ -452,29 +405,127 @@
       var myLine = new Chart(ctx, config);
       // var chart = new Chart(ctx, cfg);
 
+//      var base_url = window.location.href;
+//      var base_url = window.location.hostname;
+      var getUrl = window.location;
+      var base_url = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+      var ajax_url = base_url+'/db.php';
 
-       $( "#1-apply" ).click(function(event) {
+       $( "#1-apply").click(function(event) {
            event.preventDefault();
            var site  = $("#1-site").val();
            var climate = $("#1-climate").val();
            var species = $("#1-species").val();
 
            $.ajax({
-               url: 'http://localhost/shelterbelt-demo/db.php',
+               url: ajax_url,
                dataType: 'json',
+               type: 'GET',
                data : { site : site, climate : climate, species: species },
-               success: function(data3) {
+               success: function(res) {
                    config.data.datasets.forEach(function(dataset, i) {
                        if(i == 0){
-                           dataset.data = data3;
+                           dataset.data = res;
                        }
                    });
                    window.myLine.update();
-               },
-               type: 'GET'
+               }
+
            });
 
        });
+
+       $( "#2-apply").click(function(event) {
+           event.preventDefault();
+           var site  = $("#2-site").val();
+           var climate = $("#2-climate").val();
+           var species = $("#2-species").val();
+
+           $.ajax({
+               url: ajax_url,
+               dataType: 'json',
+               type: 'GET',
+               data : { site : site, climate : climate, species: species },
+               success: function(res) {
+                   config.data.datasets.forEach(function(dataset, i) {
+                       if(i == 1){
+                           dataset.data = res;
+                       }
+                   });
+                   window.myLine.update();
+               }
+
+           });
+
+       });
+
+      $( "#3-apply").click(function(event) {
+          event.preventDefault();
+          var site  = $("#3-site").val();
+          var climate = $("#3-climate").val();
+          var species = $("#3-species").val();
+
+          $.ajax({
+              url: ajax_url,
+              dataType: 'json',
+              type: 'GET',
+              data : { site : site, climate : climate, species: species },
+              success: function(res) {
+                  config.data.datasets.forEach(function(dataset, i) {
+                      if(i == 2){
+                          dataset.data = res;
+                      }
+                  });
+                  window.myLine.update();
+              }
+
+          });
+
+      });
+
+      $( "#4-apply").click(function(event) {
+          event.preventDefault();
+          var site  = $("#4-site").val();
+          var climate = $("#4-climate").val();
+          var species = $("#4-species").val();
+
+          $.ajax({
+              url: ajax_url,
+              dataType: 'json',
+              type: 'GET',
+              data : { site : site, climate : climate, species: species },
+              success: function(res) {
+                  config.data.datasets.forEach(function(dataset, i) {
+                      if(i == 3){
+                          dataset.data = res;
+                      }
+                  });
+                  window.myLine.update();
+              }
+          });
+      });
+
+      $( "#5-apply").click(function(event) {
+          event.preventDefault();
+          var site  = $("#5-site").val();
+          var climate = $("#5-climate").val();
+          var species = $("#5-species").val();
+
+          $.ajax({
+              url: ajax_url,
+              dataType: 'json',
+              type: 'GET',
+              data : { site : site, climate : climate, species: species },
+              success: function(res) {
+                  config.data.datasets.forEach(function(dataset, i) {
+                      if(i == 4){
+                          dataset.data = res;
+                      }
+                  });
+                  window.myLine.update();
+              }
+          });
+      });
 
 
       // second tab loading map

@@ -15,23 +15,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="464" column="65" lean-forward="false" selection-start-line="464" selection-start-column="65" selection-end-line="464" selection-end-column="65" />
+            <state relative-caret-position="479">
+              <caret line="234" column="97" lean-forward="false" selection-start-line="234" selection-start-column="97" selection-end-line="234" selection-end-column="97" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="-67">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <marker date="1537507171432" expanded="true" signature="299:345" ph="SELECT * FRO... ring_growth" />
+                <marker date="1537507343279" expanded="true" signature="187:233" ph="SELECT * FRO... ring_growth" />
               </folding>
             </state>
           </provider>
@@ -44,6 +44,7 @@
       <find>myLine</find>
       <find>chart</find>
       <find>echo</find>
+      <find>Chart</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -52,8 +53,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/db.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -165,12 +166,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537482356176</updated>
-      <workItem from="1537482358311" duration="12047000" />
+      <workItem from="1537482358311" duration="18738000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12047000" />
+    <option name="totallyTimeSpent" value="18738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="734" extended-state="6" />
@@ -207,21 +208,21 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="464" column="65" lean-forward="false" selection-start-line="464" selection-start-column="65" selection-end-line="464" selection-end-column="65" />
-          <folding />
+        <state relative-caret-position="-67">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1537507343279" expanded="true" signature="187:233" ph="SELECT * FRO... ring_growth" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <marker date="1537507171432" expanded="true" signature="299:345" ph="SELECT * FRO... ring_growth" />
-          </folding>
+        <state relative-caret-position="479">
+          <caret line="234" column="97" lean-forward="false" selection-start-line="234" selection-start-column="97" selection-end-line="234" selection-end-column="97" />
+          <folding />
         </state>
       </provider>
     </entry>
