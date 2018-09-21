@@ -18,28 +18,32 @@ $arr=json_decode($string,true);
     $r_climate = $_GET['climate'];
     $r_species = $_GET['species'];
 
-function search_item($site, $scenario, $species, $array) {
-    foreach ($array as $key => $val) {
-        if ($val['site'] === $site && $val['Scenario'] === $scenario && $val['species'] === $species ) {
-            return $key;
+if($r_site =='' and $r_climate =='' and $r_species ==''){
+    echo json_encode(array());
+}else{
+
+    function search_item($site, $scenario, $species, $array) {
+        foreach ($array as $key => $val) {
+            if ($val['site'] === $site && $val['Scenario'] === $scenario && $val['species'] === $species ) {
+                return $key;
+            }
+        }
+        return null;
+    }
+
+    $arr_key = search_item($r_site,$r_climate,$r_species, $arr);
+
+    foreach($arr[$arr_key] as $key=>$value){
+        if(!is_int($key)){
+            unset($arr[$arr_key][$key]);
         }
     }
-    return null;
-}
 
-$arr_key = search_item($r_site,$r_climate,$r_species, $arr);
-
-foreach($arr[$arr_key] as $key=>$value){
-    if(!is_int($key)){
-        unset($arr[$arr_key][$key]);
+    foreach ($arr[$arr_key] as $key=>$value){
+        $arr_for_js[] = array(
+            'x' => $key,
+            'y' => $value,
+        );
     }
+    echo  json_encode($arr_for_js);
 }
-
-foreach ($arr[$arr_key] as $key=>$value){
-    $arr_for_js[] = array(
-        'x' => $key,
-        'y' => $value,
-    );
-}
-
-echo  json_encode($arr_for_js);

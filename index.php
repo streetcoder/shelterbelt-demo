@@ -103,40 +103,46 @@
                                   <label for="climate_scinerio" class="col-sm-2 col-form-label">Sites</label>
                                   <div class="col-sm-2">
                                       <select id="1-site" class="form-control">
+                                        <option value=""></option>
                                         <option value="pm1" selected>PM1</option>
                                         <option value="pm2">PM2</option>
                                       </select>                                  
                                   </div>                                
                                   <div class="col-sm-2">
                                       <select id="2-site" class="form-control">
+                                          <option value=""></option>
                                           <option value="pm1" selected>PM1</option>
                                           <option value="pm2">PM2</option>
                                       </select>
                                   </div>                                
                                   <div class="col-sm-2">
                                       <select id="3-site" class="form-control">
+                                          <option value=""></option>
                                           <option value="pm1">PM1</option>
                                           <option value="pm2" selected>PM2</option>
                                       </select>
                                   </div>                                
-<!--                                  <div class="col-sm-2">-->
-<!--                                      <select id="4-site" class="form-control">-->
-<!--                                          <option value="pm1">PM1</option>-->
-<!--                                          <option value="pm2" selected>PM2</option>-->
-<!--                                      </select>-->
-<!--                                  </div>                                -->
-<!--                                  <div class="col-sm-2">-->
-<!--                                      <select id="5-site" class="form-control">-->
-<!--                                          <option value="pm1" selected>PM1</option>-->
-<!--                                          <option value="pm2">PM2</option>-->
-<!--                                      </select>-->
-<!--                                  </div>                                -->
+                                  <div class="col-sm-2">
+                                      <select id="4-site" class="form-control">
+                                          <option value=""></option>
+                                          <option value="pm1">PM1</option>
+                                          <option value="pm2" selected>PM2</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-sm-2">
+                                      <select id="5-site" class="form-control">
+                                          <option value=""></option>
+                                          <option value="pm1" selected>PM1</option>
+                                          <option value="pm2">PM2</option>
+                                      </select>
+                                  </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="climate_scinerio" class="col-sm-2 col-form-label">Climate Scinerio</label>
                                     <div class="col-sm-2">
                                         <select id="1-climate" class="form-control">
+                                          <option value=""></option>
                                           <option value="B1" selected>B1</option>
                                           <option value="A1B">A1B</option>
                                           <option value="A2">A2</option>
@@ -144,6 +150,7 @@
                                     </div>                                
                                     <div class="col-sm-2">
                                         <select id="2-climate" class="form-control">
+                                            <option value=""></option>
                                             <option value="B1" selected>B1</option>
                                             <option value="A1B">A1B</option>
                                             <option value="A2">A2</option>
@@ -151,25 +158,28 @@
                                     </div> 
                                     <div class="col-sm-2">
                                         <select id="3-climate" class="form-control">
+                                            <option value=""></option>
                                             <option value="B1">B1</option>
                                             <option value="A1B" selected>A1B</option>
                                             <option value="A2">A2</option>
                                         </select>                                  
                                     </div>                                
-<!--                                    <div class="col-sm-2">-->
-<!--                                        <select id="4-climate" class="form-control">-->
-<!--                                            <option value="B1">B1</option>-->
-<!--                                            <option value="A1B">A1B</option>-->
-<!--                                            <option value="A2" selected>A2</option>-->
-<!--                                        </select>-->
-<!--                                    </div> -->
-<!--                                    <div class="col-sm-2">-->
-<!--                                        <select id="5-climate" class="form-control">-->
-<!--                                            <option value="B1">B1</option>-->
-<!--                                            <option value="A1B" selected>A1B</option>-->
-<!--                                            <option value="A2">A2</option>-->
-<!--                                        </select>-->
-<!--                                    </div>                                                                                                 -->
+                                    <div class="col-sm-2">
+                                        <select id="4-climate" class="form-control">
+                                            <option value=""></option>
+                                            <option value="B1">B1</option>
+                                            <option value="A1B">A1B</option>
+                                            <option value="A2" selected>A2</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select id="5-climate" class="form-control">
+                                            <option value=""></option>
+                                            <option value="B1">B1</option>
+                                            <option value="A1B" selected>A1B</option>
+                                            <option value="A2">A2</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 
 
@@ -177,6 +187,7 @@
                                     <label for="species" class="col-sm-2 col-form-label">Species</label>
                                     <div class="col-sm-2">
                                         <select id="1-species" class="form-control">
+                                            <option value=""></option>
                                             <option selected>White Spruce</option>
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
@@ -185,6 +196,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <select id="2-species" class="form-control">
+                                            <option value=""></option>
                                             <option>White Spruce</option>
                                             <option selected>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
@@ -193,28 +205,31 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <select id="3-species" class="form-control">
+                                            <option value=""></option>
                                             <option>White Spruce</option>
                                             <option>Scots Pine</option>
                                             <option selected>Hybrid Poplar</option>
                                             <option>Green Ash</option>
                                         </select>
                                     </div>
-<!--                                    <div class="col-sm-2">-->
-<!--                                        <select id="4-species" class="form-control">-->
-<!--                                            <option>White Spruce</option>-->
-<!--                                            <option>Scots Pine</option>-->
-<!--                                            <option>Hybrid Poplar</option>-->
-<!--                                            <option selected>Green Ash</option>-->
-<!--                                        </select>-->
-<!--                                    </div>-->
-<!--                                    <div class="col-sm-2">-->
-<!--                                        <select id="5-species" class="form-control">-->
-<!--                                            <option>White Spruce</option>-->
-<!--                                            <option selected>Scots Pine</option>-->
-<!--                                            <option>Hybrid Poplar</option>-->
-<!--                                            <option>Green Ash</option>-->
-<!--                                        </select>-->
-<!--                                    </div>-->
+                                    <div class="col-sm-2">
+                                        <select id="4-species" class="form-control">
+                                            <option value=""></option>
+                                            <option>White Spruce</option>
+                                            <option>Scots Pine</option>
+                                            <option>Hybrid Poplar</option>
+                                            <option selected>Green Ash</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select id="5-species" class="form-control">
+                                            <option value=""></option>
+                                            <option>White Spruce</option>
+                                            <option selected>Scots Pine</option>
+                                            <option>Hybrid Poplar</option>
+                                            <option>Green Ash</option>
+                                        </select>
+                                    </div>
                                 </div>
 
                                 <div class="form-group row">
@@ -228,12 +243,12 @@
                                     <div class="col-sm-2">
                                         <button id="3-apply" type="submit" class="btn btn-success btn-block">Apply</button>
                                     </div>
-<!--                                    <div class="col-sm-2">-->
-<!--                                        <button id="4-apply" type="submit" class="btn btn-success btn-block">Apply</button>-->
-<!--                                    </div>-->
-<!--                                    <div class="col-sm-2">-->
-<!--                                        <button id="5-apply" type="submit" class="btn btn-success btn-block">Apply</button>-->
-<!--                                    </div>-->
+                                    <div class="col-sm-2">
+                                        <button id="4-apply" type="submit" class="btn btn-success btn-block">Apply</button>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button id="5-apply" type="submit" class="btn btn-success btn-block">Apply</button>
+                                    </div>
 
                                 </div>
 
@@ -349,20 +364,20 @@
              fill: false,
              data: rg_data3
            },
-//          {
-//              label: 'Ring Growth 4',
-//              backgroundColor: color('rgb(255, 159, 64)').alpha(0.5).rgbString(),
-//              borderColor: 'rgb(255, 159, 64)',
-//              fill: false,
-//              data: rg_data4
-//          },
-//          {
-//              label: 'Ring Growth 5',
-//              backgroundColor: color('rgb(153, 102, 255)').alpha(0.5).rgbString(),
-//              borderColor: 'rgb(153, 102, 255)',
-//              fill: false,
-//              data: rg_data5
-//          }
+          {
+              label: 'Ring Growth 4',
+              backgroundColor: color('rgb(255, 159, 64)').alpha(0.5).rgbString(),
+              borderColor: 'rgb(255, 159, 64)',
+              fill: false,
+              data: rg_data4
+          },
+          {
+              label: 'Ring Growth 5',
+              backgroundColor: color('rgb(153, 102, 255)').alpha(0.5).rgbString(),
+              borderColor: 'rgb(153, 102, 255)',
+              fill: false,
+              data: rg_data5
+          }
 
         ]
         },
@@ -400,8 +415,6 @@
       var myLine = new Chart(ctx, config);
       // var chart = new Chart(ctx, cfg);
 
-//      var base_url = window.location.href;
-//      var base_url = window.location.hostname;
       var getUrl = window.location;
       var base_url = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
       var ajax_url = base_url+'/db.php';
@@ -418,6 +431,7 @@
                type: 'GET',
                data : { site : site, climate : climate, species: species },
                success: function(res) {
+
                    config.data.datasets.forEach(function(dataset, i) {
                        if(i == 0){
                            dataset.data = res;
