@@ -75,7 +75,7 @@
         <div class="col-md-12">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="scenario-tab" data-toggle="tab" href="#scenario" role="tab" aria-controls="scenario" aria-selected="true">Climate Scenario</a>
+                  <a class="nav-link active" id="scenario-tab" data-toggle="tab" href="#scenario" role="tab" aria-controls="scenario" aria-selected="true">Scenario Visualizer</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="plant-tab" data-toggle="tab" href="#plant" role="tab" aria-controls="plant" aria-selected="false">Plant a shelterbelt</a>
@@ -96,42 +96,61 @@
                           Filter Options
                         </div>
                         <div class="card-body">
-                          
-                            <form>
+
+                            <div class="form-group row">
+                                <label for="species" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-2">
+                                    <label>Scenario 1</label>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Scenario 2</label>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Scenario 3</label>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Scenario 4</label>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Scenario 5</label>
+                                </div>
+
+                            </div>
+
                               <div class="form-group row">
 
                                   <label for="climate_scinerio" class="col-sm-2 col-form-label">Sites</label>
                                   <div class="col-sm-2">
                                       <select id="1-site" class="form-control">
-                                        <option value=""></option>
+                                        <option value="">...none...</option>
                                         <option value="pm1" selected>PM1</option>
                                         <option value="pm2">PM2</option>
                                       </select>                                  
                                   </div>                                
                                   <div class="col-sm-2">
                                       <select id="2-site" class="form-control">
-                                          <option value=""></option>
+                                          <option value="">...none...</option>
                                           <option value="pm1" selected>PM1</option>
                                           <option value="pm2">PM2</option>
                                       </select>
                                   </div>                                
                                   <div class="col-sm-2">
                                       <select id="3-site" class="form-control">
-                                          <option value=""></option>
+                                          <option value="">...none...</option>
                                           <option value="pm1">PM1</option>
                                           <option value="pm2" selected>PM2</option>
                                       </select>
                                   </div>                                
                                   <div class="col-sm-2">
                                       <select id="4-site" class="form-control">
-                                          <option value=""></option>
+                                          <option value="">...none...</option>
                                           <option value="pm1">PM1</option>
                                           <option value="pm2" selected>PM2</option>
                                       </select>
                                   </div>
                                   <div class="col-sm-2">
                                       <select id="5-site" class="form-control">
-                                          <option value=""></option>
+                                          <option value="">...none...</option>
                                           <option value="pm1" selected>PM1</option>
                                           <option value="pm2">PM2</option>
                                       </select>
@@ -139,10 +158,10 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="climate_scinerio" class="col-sm-2 col-form-label">Climate Scinerio</label>
+                                    <label for="climate_scinerio" class="col-sm-2 col-form-label">Climate Expected</label>
                                     <div class="col-sm-2">
                                         <select id="1-climate" class="form-control">
-                                          <option value=""></option>
+                                          <option value="">...none...</option>
                                           <option value="B1" selected>B1</option>
                                           <option value="A1B">A1B</option>
                                           <option value="A2">A2</option>
@@ -150,7 +169,7 @@
                                     </div>                                
                                     <div class="col-sm-2">
                                         <select id="2-climate" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option value="B1" selected>B1</option>
                                             <option value="A1B">A1B</option>
                                             <option value="A2">A2</option>
@@ -158,7 +177,7 @@
                                     </div> 
                                     <div class="col-sm-2">
                                         <select id="3-climate" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option value="B1">B1</option>
                                             <option value="A1B" selected>A1B</option>
                                             <option value="A2">A2</option>
@@ -166,7 +185,7 @@
                                     </div>                                
                                     <div class="col-sm-2">
                                         <select id="4-climate" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option value="B1">B1</option>
                                             <option value="A1B">A1B</option>
                                             <option value="A2" selected>A2</option>
@@ -174,7 +193,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <select id="5-climate" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option value="B1">B1</option>
                                             <option value="A1B" selected>A1B</option>
                                             <option value="A2">A2</option>
@@ -187,7 +206,7 @@
                                     <label for="species" class="col-sm-2 col-form-label">Species</label>
                                     <div class="col-sm-2">
                                         <select id="1-species" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option selected>White Spruce</option>
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
@@ -196,7 +215,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <select id="2-species" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option>White Spruce</option>
                                             <option selected>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
@@ -205,7 +224,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <select id="3-species" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option>White Spruce</option>
                                             <option>Scots Pine</option>
                                             <option selected>Hybrid Poplar</option>
@@ -214,7 +233,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <select id="4-species" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option>White Spruce</option>
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
@@ -223,7 +242,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <select id="5-species" class="form-control">
-                                            <option value=""></option>
+                                            <option value="">...none...</option>
                                             <option>White Spruce</option>
                                             <option selected>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
@@ -250,6 +269,18 @@
                                         <button id="5-apply" type="submit" class="btn btn-success btn-block">Apply</button>
                                     </div>
 
+                                </div>
+                                <hr />
+                                <div class="form-group row">
+                                    <div class="col-sm-4">
+                                        <button class="btn btn-secondary btn-block">Tree Ring</button>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button class="btn btn-secondary btn-block">Above Ground C</button>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button class="btn btn-secondary btn-block">Establishment and Maintenance Costs</button>
+                                    </div>
                                 </div>
 
                             </form>
@@ -344,35 +375,35 @@
           labels: [  5, 10, 25, 50, 100 ],
           datasets: [
             {
-            label: 'Ring Growth 1',
+            label: 'Scenario 1',
             backgroundColor: color('rgb(255, 99, 132)').alpha(0.5).rgbString(),
             borderColor: 'rgb(255, 99, 132)',
             fill: false,
             data: rg_data1
           }, 
           {
-            label: 'Ring Growth 2',
+            label: 'Scenario 2',
             backgroundColor: color('rgb(54, 162, 235)').alpha(0.5).rgbString(),
             borderColor: 'rgb(54, 162, 235)',
             fill: false,
             data: rg_data2
           },
            {
-             label: 'Ring Growth 3',
+             label: 'Scenario 3',
              backgroundColor: color('rgb(75, 192, 192)').alpha(0.5).rgbString(),
              borderColor: 'rgb(75, 192, 192)',
              fill: false,
              data: rg_data3
            },
           {
-              label: 'Ring Growth 4',
+              label: 'Scenario 4',
               backgroundColor: color('rgb(255, 159, 64)').alpha(0.5).rgbString(),
               borderColor: 'rgb(255, 159, 64)',
               fill: false,
               data: rg_data4
           },
           {
-              label: 'Ring Growth 5',
+              label: 'Scenario 5',
               backgroundColor: color('rgb(153, 102, 255)').alpha(0.5).rgbString(),
               borderColor: 'rgb(153, 102, 255)',
               fill: false,
@@ -382,19 +413,24 @@
         ]
         },
         options: {
+            layout: {
+                padding: {
+                    top: 0
+                }
+            },
           title: {
             display: true,
-            text: 'Ring Growth Scale'
+            text: 'Scenarios'
           },
-        tooltips: {
-            enabled: true,
-            mode: 'single',
-            callbacks: {
-                title: function(tooltipItems, data) {
-                    return 'Year ' + tooltipItems[0].xLabel;
+            tooltips: {
+                enabled: true,
+                mode: 'single',
+                callbacks: {
+                    title: function(tooltipItems, data) {
+                        return 'Year ' + tooltipItems[0].xLabel;
+                    }
                 }
-            }
-        },
+            },
           scales: {
             xAxes: [{
               scaleLabel: {
