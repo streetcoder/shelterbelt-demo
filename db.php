@@ -1,12 +1,18 @@
 <?php
 
-    $dbconn = pg_connect("host=sksoildb.usask.ca port=5432 dbname=shelterbelt user=postgres password=SkSoilDB")
-    or die('Could not connect: ' . pg_last_error());
+$string = file_get_contents("ring_growth.json");
 
-    $query = 'SELECT * FROM "public"."ring_growth" LIMIT 200';
-    $result = pg_query($query) or die('Query failed: ' . pg_last_error());
+$arr=json_decode($string,true);
 
-    $arr = pg_fetch_all($result);
+// this part for database system
+
+//    $dbconn = pg_connect("host=sksoildb.usask.ca port=5432 dbname=shelterbelt user=postgres password=SkSoilDB")
+//    or die('Could not connect: ' . pg_last_error());
+//
+//    $query = 'SELECT * FROM "public"."ring_growth" LIMIT 200';
+//    $result = pg_query($query) or die('Query failed: ' . pg_last_error());
+//
+//    $arr = pg_fetch_all($result);
 
     $r_site = $_GET['site'];
     $r_climate = $_GET['climate'];
