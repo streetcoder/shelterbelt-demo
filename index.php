@@ -102,10 +102,10 @@
 
                                   <label for="climate_scinerio" class="col-sm-2 col-form-label">Sites</label>
                                   <div class="col-sm-2">
-                                      <select class="form-control">
-                                        <option selected>Sites</option>
-                                        <option>PM1</option>
-                                        <option>PM2</option>
+                                      <select id="1-site" class="form-control">
+                                        <option value="" selected>Sites</option>
+                                        <option value="pm1">PM1</option>
+                                        <option value="pm2">PM2</option>
                                       </select>                                  
                                   </div>                                
                                   <div class="col-sm-2">
@@ -141,11 +141,11 @@
                                 <div class="form-group row">
                                     <label for="climate_scinerio" class="col-sm-2 col-form-label">Climate Scinerio</label>
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                          <option selected>Scinerio</option>
-                                          <option>B1</option>
-                                          <option>A1B</option>
-                                          <option>A2</option>
+                                        <select id="1-climate" class="form-control">
+                                          <option value="" selected>Scinerio</option>
+                                          <option value="B1">B1</option>
+                                          <option value="A1B">A1B</option>
+                                          <option value="A2">A2</option>
                                         </select>                                  
                                     </div>                                
                                     <div class="col-sm-2">
@@ -182,17 +182,18 @@
                                     </div>                                                                                                 
                                 </div>
                                 
+
                                 <div class="form-group row">
                                     <label for="species" class="col-sm-2 col-form-label">Species</label>
                                     <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option selected>Species</option>
+                                        <select id="1-species" class="form-control">
+                                            <option value="" selected>Species</option>
                                             <option>White Spruce</option>
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
                                             <option>Green Ash</option>
-                                        </select>                                   
-                                    </div> 
+                                        </select>
+                                    </div>
                                     <div class="col-sm-2">
                                         <select class="form-control">
                                             <option selected>Species</option>
@@ -200,8 +201,8 @@
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
                                             <option>Green Ash</option>
-                                        </select>                                   
-                                    </div> 
+                                        </select>
+                                    </div>
                                     <div class="col-sm-2">
                                         <select class="form-control">
                                             <option selected>Species</option>
@@ -209,8 +210,8 @@
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
                                             <option>Green Ash</option>
-                                        </select>                                   
-                                    </div> 
+                                        </select>
+                                    </div>
                                     <div class="col-sm-2">
                                         <select class="form-control">
                                             <option selected>Species</option>
@@ -218,8 +219,8 @@
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
                                             <option>Green Ash</option>
-                                        </select>                                   
-                                    </div> 
+                                        </select>
+                                    </div>
                                     <div class="col-sm-2">
                                         <select class="form-control">
                                             <option selected>Species</option>
@@ -227,15 +228,35 @@
                                             <option>Scots Pine</option>
                                             <option>Hybrid Poplar</option>
                                             <option>Green Ash</option>
-                                        </select>                                   
-                                    </div>                                                                                                  
-                                </div>                                               
-                                                            
-                              <div class="form-group row">
-                                <div class="col-sm-10">
-                                  <button type="submit" class="btn btn-primary">Apply</button>
+                                        </select>
+                                    </div>
                                 </div>
-                              </div>
+
+                                <div class="form-group row">
+                                    <label for="species" class="col-sm-2 col-form-label"></label>
+                                    <div class="col-sm-2">
+                                        <button id="1-apply" type="submit" class="btn btn-primary">Apply</button>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn btn-primary">Apply</button>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn btn-primary">Apply</button>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn btn-primary">Apply</button>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn btn-primary">Apply</button>
+                                    </div>
+
+                                </div>
+
+<!--                              <div class="form-group row">-->
+<!--                                <div class="col-sm-10">-->
+<!--                                  <button type="submit" class="btn btn-primary">Apply</button>-->
+<!--                                </div>-->
+<!--                              </div>-->
                             </form>
                           
                         </div>
@@ -313,6 +334,28 @@
 
     <script type="text/javascript">
 
+       var data1 = [{
+           x: 5,
+           y: 1.9
+       }, {
+           x: 10,
+           y: 2
+       }, {
+           x: 25,
+           y: 1.9
+       }, {
+           x: 50,
+           y: 0.7
+       }, {
+           x: 100,
+           y: 0
+       }
+       ];
+
+
+
+
+
       var ctx = document.getElementById('myChart').getContext('2d');
       var timeFormat = 'MM/DD/YYYY HH:mm';
 
@@ -341,23 +384,7 @@
             backgroundColor: color('rgb(255, 99, 132)').alpha(0.5).rgbString(),
             borderColor: 'rgb(255, 99, 132)',
             fill: false,
-            data: [{
-              x: 5,
-              y: 1.9
-            }, {
-              x: 10,
-              y: 2
-            }, {
-              x: 25,
-              y: 1.9
-            }, {
-              x: 50,
-              y: 0.7
-            }, {
-              x: 100,
-              y: 0
-            }
-            ]
+            data: data1
           }, 
           {
             label: 'My Second dataset',
@@ -430,8 +457,59 @@
         }
       };
 
-      var chart = new Chart(ctx, config);
+      var myLine = new Chart(ctx, config);
       // var chart = new Chart(ctx, cfg);
+
+
+       $( "#1-apply" ).click(function(event) {
+           event.preventDefault();
+           var site  = $("#1-site").val();
+           var climate = $("#1-climate").val();
+           var species = $("#1-species").val();
+
+           var data2 = [{
+               x: 5,
+               y: 1
+           }, {
+               x: 10,
+               y: 2
+           }, {
+               x: 25,
+               y: 3
+           }, {
+               x: 50,
+               y: 4
+           }, {
+               x: 100,
+               y: 2
+           }
+           ];
+
+           config.data.datasets.forEach(function(dataset, i) {
+
+               if(i == 0){
+                   console.log(dataset.data);
+                   dataset.data = data2;
+                   console.log(dataset.data);
+               }
+
+//               dataset.data.forEach(function(dataObj, j) {
+//                   if (typeof dataObj === 'object') {
+//                       dataObj.y = 5;
+//                   } else {
+//                       //dataset.data[j] = 10;
+//                   }
+//                   console.log(dataObj);
+//                   console.log(dataset.data);
+//                   console.log(j);
+//               });
+           });
+           window.myLine.update();
+//           data1 = data2;
+//          alert($("#1-site").val());
+//          alert($("#1-climate").val());
+//          alert($("#1-species").val());
+       });
 
 
       // second tab loading map
