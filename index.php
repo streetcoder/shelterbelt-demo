@@ -359,14 +359,6 @@
       var ctx = document.getElementById('myChart').getContext('2d');
       var timeFormat = 'MM/DD/YYYY HH:mm';
 
-      function newDate(days) {
-        return moment().add(days, 'd').toDate();
-      }
-
-      function newDateString(days) {
-        return moment().add(days, 'd').format(timeFormat);
-      }
-    
       var color = Chart.helpers.color;
       var config = {
         type: 'line',
@@ -467,9 +459,33 @@
            var climate = $("#1-climate").val();
            var species = $("#1-species").val();
 
+//           var ajax_data = [];
+           $.ajax({
+               url: 'http://localhost/shelterbelt-demo/db.php',
+               dataType: 'json',
+//               async: false,
+//               success: function(data3) {
+//
+//                   var newStr = data3.substring(1, data3 .length-1);
+//                   console.log(newStr);
+//
+//                   ajax_data.push(newStr)
+//               },
+               type: 'GET'
+           }).done(function (results) {
+
+               config.data.datasets.forEach(function(dataset, i) {
+
+                   if(i == 0){
+                       dataset.data = results;
+                   }
+               });
+            });
+
+
            var data2 = [{
-               x: 5,
-               y: 1
+               "x": "5",
+               "y": "2"
            }, {
                x: 10,
                y: 2
@@ -485,30 +501,28 @@
            }
            ];
 
-           config.data.datasets.forEach(function(dataset, i) {
+//           console.log(ajax_data);
 
-               if(i == 0){
-                   console.log(dataset.data);
-                   dataset.data = data2;
-                   console.log(dataset.data);
-               }
-
-//               dataset.data.forEach(function(dataObj, j) {
-//                   if (typeof dataObj === 'object') {
-//                       dataObj.y = 5;
-//                   } else {
-//                       //dataset.data[j] = 10;
-//                   }
-//                   console.log(dataObj);
-//                   console.log(dataset.data);
-//                   console.log(j);
-//               });
-           });
+//           config.data.datasets.forEach(function(dataset, i) {
+//
+//               if(i == 0){
+//                   dataset.data = ajax_data;
+//               }
+//           });
            window.myLine.update();
-//           data1 = data2;
-//          alert($("#1-site").val());
-//          alert($("#1-climate").val());
-//          alert($("#1-species").val());
+
+//
+//           var data3 = [{"x":5,"y":"1.5"},{"x":10,"y":"1.6"},{"x":25,"y":"1.4"},{"x":50,"y":"1.2"},{"x":100,"y":"1.0"}];
+
+//           config.data.datasets.forEach(function(dataset, i) {
+//
+//               if(i == 0){
+////                   console.log(dataset.data);
+//                   dataset.data = data3;
+////                   console.log(dataset.data);
+//               }
+//           });
+//           window.myLine.update();
        });
 
 
