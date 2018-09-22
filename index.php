@@ -97,6 +97,11 @@
                         </div>
                         <div class="card-body">
 
+                            <div class="alert alert-info" role="alert">
+                                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                Select every options of a scenario to see the result or deselect every options of a scenario to remove a line.
+                            </div>
+
                             <div class="form-group row">
                                 <label for="species" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-2">
