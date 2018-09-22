@@ -99,7 +99,7 @@
 
                             <div class="alert alert-info" role="alert">
                                 <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                                Select every options of a scenario to see the result or deselect every options of a scenario to remove a line.
+                                Select every options of a scenario to see the result or deselect every options of a scenario to remove a line from the graph.
                             </div>
 
                             <div class="form-group row">
